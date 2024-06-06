@@ -60,7 +60,47 @@ extension Color {
 
 struct LoginView: View {
     var body: some View {
-        Text("Login View")
+        ZStack {
+            Color.black
+            VStack {
+                Spacer()
+                HStack {
+                    Text(">Status")
+                        .foregroundColor(.white)
+                }
+                Spacer()
+                HStack {
+                    Text(">Symbols")
+                        .foregroundColor(.white)
+                }
+                Spacer()
+                HStack {
+                    Text(">Speed")
+                        .foregroundColor(.white)
+                }
+                Spacer()
+                HStack {
+                    Text(">Program")
+                        .foregroundColor(.white)
+                }
+                Spacer()
+                HStack {
+                    Text(">Stack")
+                        .foregroundColor(.white)
+                }
+                Spacer()
+                HStack {
+                    Text(">Variables")
+                        .foregroundColor(.white)
+                }
+                Spacer()
+                HStack {
+                    Text(">Output")
+                        .foregroundColor(.white)
+                }
+                Spacer()
+            }
+        }
     }
 }
 
