@@ -13,10 +13,10 @@ let green = Color(hex: 0x71BC0B)
 let white = Color(hex: 0xFFFFFF)
 
 struct ContentView: View {
+    @State var showGameView: Bool = false
     var body: some View {
         ZStack {
             Color.black
-                .ignoresSafeArea()
             VStack {
                 Text("BASIC Programming")
                     .font(.custom("Retro Gaming", size: 40))
@@ -27,8 +27,19 @@ struct ContentView: View {
             }
             .padding()
         }
+        Spacer()
+        VStack {
+            Color.black
+                .ignoresSafeArea()
+            Button(action: {}) {
+                Text("Play!")
+            }
+            .padding()
+            .foregroundColor(.black)
+            .background(Color(red))
+        }
+        Spacer()
         
-
     }
 }
 
