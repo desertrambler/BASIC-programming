@@ -13,7 +13,7 @@ let green = Color(hex: 0x71BC0B)
 let white = Color(hex: 0xFFFFFF)
 
 struct ContentView: View {
-    @State var showGameView: Bool = false
+    @State var isModal: Bool = false
     var body: some View {
         ZStack {
             Color.black
@@ -31,12 +31,15 @@ struct ContentView: View {
         VStack {
             Color.black
                 .ignoresSafeArea()
-            Button(action: {}) {
-                Text("Play!")
+            Button("Play") {
+                self.isModal = true
             }
             .padding()
             .foregroundColor(.black)
             .background(Color(red))
+            .sheet(isPresented: $isModal, content: {
+                LoginView()
+            })
         }
         Spacer()
         
@@ -52,6 +55,12 @@ extension Color {
             blue: Double((hex >> 00) & 0xff) / 255,
             opacity: alpha
         )
+    }
+}
+
+struct LoginView: View {
+    var body: some View {
+        Text("Login View")
     }
 }
 
